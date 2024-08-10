@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/databaseFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".databaseFragment"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/database_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/driverRadioDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:text="Drivers"
+                android:theme="@style/MyRadioButton"/>
+
+            <RadioButton
+                android:id="@+id/itemRadioDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:theme="@style/MyRadioButton"
+                android:text="Items" />
+
+            <RadioButton
+                android:id="@+id/dispatchRadioDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:theme="@style/MyRadioButton"
+                android:text="Dispatch" />
+
+            <RadioButton
+                android:id="@+id/loanRadioDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".25"
+                android:theme="@style/MyRadioButton"
+                android:text="Loan" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/dbSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_viewbg"
+        android:backgroundTint="@color/white"
+        app:queryHint="Search Here..."
+        app:iconifiedByDefault="false"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/driverRecyclerViewDB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_grey"/>
+    </ScrollView>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addButtonDB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/add_button_border"
+            android:textColor="#FFFFFF"
+            android:text="Add   (+)" />
+
+    </LinearLayout>
+
+</LinearLayout>
